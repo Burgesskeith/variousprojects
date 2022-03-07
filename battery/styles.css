@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  margin: 40px auto;
+}
+header {
+  margin: 40px auto;
+  color: #333;
+  text-align: center;
+  font-size: 30px;
+}
+
+#battery-card {
+  border: 1px solid #ccc;
+  width: 350px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px #ccc;
+  font-size: 16px;
+}
+
+#innerHead {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(72, 71, 71);
+  border-radius: 8px 8px 0 0;
+}
+#card-title {
+  padding: 30px;
+  margin-top: 10px;
+  border-radius: 8px;
+  color: #fff;
+}
+#boltIco {
+  color: white;
+  padding: 5px;
+  margin: 22px 22px 0 0;
+  transform: rotate(22deg);
+}
+
+/*  Battery level section */
+#percent {
+  display: flex;
+  justify-content: evenly;
+  margin: 30px 0 30px 0;
+}
+
+#bat-outer {
+  width: 200px;
+  height: 30px;
+  border: 1px #333;
+  margin: 10px 20px;
+  border: solid 1px #ccc;
+}
+#bat-level {
+  width: 50%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background-color: green;
+}
+#bat-label {
+  margin: 4px 0 0 20px;
+}
+#stats {
+  margin: 10px 0 30px 60px;
+}
+.data {
+  display: flex;
+  font-size: 12px;
+}
+.data p {
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+/* Slider */
+.slidecontainer {
+  width: 350px;
+  margin: 40px auto;
+}
+
+.slider {
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #e8e7e7;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: green;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: green;
+  cursor: pointer;
+}

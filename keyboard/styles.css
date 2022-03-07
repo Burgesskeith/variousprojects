@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#screen {
+  display: block;
+  height: 400px;
+  width: 1080px;
+  background-color: #fff;
+  margin: 2vh auto;
+  padding: 30px;
+  border: 40px solid #333;
+  border-radius: 12px;
+}
+
+#platform {
+  display: grid;
+  grid-template-columns: repeat(30, 30px);
+  grid-template-rows: repeat(6, 60px);
+  grid-gap: 5px;
+  max-width: 1085px;
+  margin: 0vh auto;
+  padding: 18px;
+  background-color: #dcdcdc;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+
+.btn {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 4px;
+  grid-column: span 2;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 17px;
+  color: rgb(91, 91, 91);
+}
+
+.btn:hover {
+  border: 2px solid #999;
+}
+.three {
+  grid-column: span 3;
+}
+.four {
+  grid-column: span 4;
+}
+.five {
+  grid-column: span 5;
+}
+.space {
+  grid-column: span 15;
+}
+#display {
+  font-size: 20px;
+  line-height: 1.4em;
+  color: #333;
+}

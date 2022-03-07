@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header id="header">
+    <nav>
+      <div id="logo"><img src="./images/tie-logo.png" alt=""></div>
+      <div>
+        <ul>
+          <li id="home"><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li id="cart">
+            <a href="#">
+              <ion-icon name="basket"></ion-icon>CART: <span id="cartNum">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="homeContainer">
+      <div id="product">
+        <img src="images/bluedot.jpg" alt="" class="prodImg">
+        <h3 class="amount">Blue Dot Tie</h3>
+        <p class="desc">Blue tie with nice dots for business use.</p>
+        <h3 class="amount">$15.00</h3>
+        <div>
+          <input type="number" class="qty" id="qt1" placeholder="Quantity">
+        </div>
+        <button class="add-cart cart1" href="#">Add to Cart</button>
+      </div>
+      <div id="product">
+        <img src="images/yellow.jpg" alt="" class="prodImg">
+        <h3 class="amount">Yellow Pattern Tie</h3>
+        <p class="desc">Yellow pattern that really stands out.</p>
+        <h3 class="amount">$20.00</h3>
+        <div>
+          <input type="number" class="qty" id="qt2" placeholder="Quantity">
+        </div>
+        <button class="add-cart cart2" href="#">Add to Cart</button>
+      </div>
+      <div id="product">
+        <img src="images/paisley.jpg" alt="" class="prodImg">
+        <h3 class="amount">Paisley Tie</h3>
+        <p class="desc">Be different with this paisley tie.</p>
+        <h3 class="amount">$10.00</h3>
+        <div>
+          <input type="number" class="qty" id="qt3" placeholder="Quantity">
+        </div>
+        <button class="add-cart cart3" href="#">Add to Cart</button>
+      </div>
+
+      <div id="product">
+        <img src="images/maroondot.jpg" alt="" class="prodImg">
+        <h3 class="amount">Maroon Dot Tie</h3>
+        <p class="desc">Formal tie for those on the executive level.</p>
+        <h3 class="amount">$25.00</h3>
+        <div>
+          <input type="number" class="qty" id="qt4" placeholder="Quantity">
+        </div>
+        <button class="add-cart" href="#">Add to Cart</button>
+      </div>
+    </div>
+
+    <div id="cartContainer">
+      <div id="cartMain">
+        <h2>Shopping Cart</h2>
+        <table id="cartTable">
+          <thead id="tableHead">
+            <th>Product Name</th>
+            <th>Price (each)</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+          </thead>
+          <tbody id="cartItems">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <div id="checkOut">
+    <h2>Checkout Page</h2>
+    <p>This is the mock checkout page</p>
+    <p>All products have been removed from the cart and you can now try again.</p>
+    <p style="color: brown; font-size: 1.2em;">Note: *** The page will refresh in a few seconds ***</p>
+  </div>
+
+  <footer id="footContainer">
+    <div>
+      <p>Copyright &copy 2021 The Big Tie Company</p>
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

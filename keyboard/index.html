@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>btnboard Project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <section id="screen">
+      <div id="display"></div>
+    </section>
+    <section id="keyboard">
+      <div id="platform">
+        <div class="btn three" onclick="escPress()">esc</div>
+        <div class="btn">F1</div>
+        <div class="btn">F2</div>
+        <div class="btn">F3</div>
+        <div class="btn">F4</div>
+        <div class="btn">F5</div>
+        <div class="btn">F6</div>
+        <div class="btn">F7</div>
+        <div class="btn">F8</div>
+        <div class="btn">F9</div>
+        <div class="btn">F10</div>
+        <div class="btn">F11</div>
+        <div class="btn">F12</div>
+        <div class="btn three" onclick="txtBtPress('')">&#9167;</div>
+        <div class="btn" onclick="txtBtPress('~')">~</div>
+        <div class="btn" onclick="numBtPress(1)">1</div>
+        <div class="btn" onclick="numBtPress(2)">2</div>
+        <div class="btn" onclick="numBtPress(3)">3</div>
+        <div class="btn" onclick="numBtPress(4)">4</div>
+        <div class="btn" onclick="numBtPress(5)">5</div>
+        <div class="btn" onclick="numBtPress(6)">6</div>
+        <div class="btn" onclick="numBtPress(7)">7</div>
+        <div class="btn" onclick="numBtPress(8)">8</div>
+        <div class="btn" onclick="numBtPress(9)">9</div>
+        <div class="btn" onclick="numBtPress(0)">0</div>
+        <div class="btn " onclick="txtBtPress('-')">-</div>
+        <div class="btn" onclick="txtBtPress('+')">+</div>
+        <div class="btn four" onclick="delPress()">delete</div>
+        <div class="btn three">tab</div>
+        <div class="btn" onclick="txtBtPress('q')">Q</div>
+        <div class="btn" onclick="txtBtPress('w')">W</div>
+        <div class="btn" onclick="txtBtPress('e')">E</div>
+        <div class="btn" onclick="txtBtPress('r')">R</div>
+        <div class="btn" onclick="txtBtPress('t')">T</div>
+        <div class="btn" onclick="txtBtPress('y')">Y</div>
+        <div class="btn" onclick="txtBtPress('u')">U</div>
+        <div class="btn" onclick="txtBtPress('i')">I</div>
+        <div class="btn" onclick="txtBtPress('o')">O</div>
+        <div class="btn" onclick="txtBtPress('p')">P</div>
+        <div class="btn" onclick="txtBtPress('[')">[</div>
+        <div class="btn" onclick="txtBtPress(']')">]</div>
+        <div class="btn three" onclick="txtBtPress('\\')">\</div>
+        <div class="btn four">caps lock</div>
+        <div class="btn" onclick="txtBtPress('a')">A</div>
+        <div class="btn" onclick="txtBtPress('s')">S</div>
+        <div class="btn" onclick="txtBtPress('d')">D</div>
+        <div class="btn" onclick="txtBtPress('f')">F</div>
+        <div class="btn" onclick="txtBtPress('g')">G</div>
+        <div class="btn" onclick="txtBtPress('h')">H</div>
+        <div class="btn" onclick="txtBtPress('j')">J</div>
+        <div class="btn" onclick="txtBtPress('k')">K</div>
+        <div class="btn" onclick="txtBtPress('l')">L</div>
+        <div class="btn" onclick="txtBtPress(';')">;</div>
+        <div class="btn" onclick="txtBtPress('\x27')">'</div>
+        <div class="btn four" onclick="txtBtPress(`\x0D`)">return</div>
+        <div class="btn five">shift</div>
+        <div class="btn" onclick="txtBtPress('z')">Z</div>
+        <div class="btn " onclick="txtBtPress('x')">X</div>
+        <div class="btn" onclick="txtBtPress('c')">C</div>
+        <div class="btn" onclick="txtBtPress('v')">V</div>
+        <div class="btn" onclick="txtBtPress('b')">B</div>
+        <div class="btn" onclick="txtBtPress('n')">N</div>
+        <div class="btn" onclick="txtBtPress('m')">M</div>
+        <div class="btn" onclick="txtBtPress(',')">,</div>
+        <div class="btn" onclick="txtBtPress('.')">.</div>
+        <div class="btn" onclick="txtBtPress('/')">/</div>
+        <div class="btn five">shift</div>
+        <div class="btn three">control</div>
+        <div class="btn">option</div>
+        <div class="btn three">command</div>
+        <div class="btn space" onclick="txtBtPress('\xA0')"></div>
+        <div class="btn three">command</div>
+        <div class="btn">option</div>
+        <div class="btn">control</div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
