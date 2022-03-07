@@ -1,6 +1,7 @@
 /*
     Demonstrates the use of encryption and decryption on a piece of text.
     Also demonstrates a few simple javascript string methods.
+    Keith Burgess 2021
 */
 
   let textToEncrypt =   "Do not go gentle into that good night,\n\
