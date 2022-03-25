@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downwind Paddling Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js"></script>
+</head>
+
+<body>
+  <main>
+    <div id="dwContainer">
+      <h1>Downwind Padding Monitor</h1>
+      <p style="text-align: center">Mooloolaba Beach</p>
+      <div id="dataSection">
+        <div id="therm">
+          <div id="inner"></div>
+        </div>
+        <div class="row">
+          <div class="label">Time of Day:</div>
+          <div class="DataDiv" id="timeOfDay"></div>
+        </div>
+        <div class="row">
+          <div class="label">Day:</div>
+          <div class="DataDiv" id="time"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">Temperature:</div>
+          <div class="DataDiv" id="temp"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">Wind Direction:</div>
+          <div class="DataDiv" id="windDir"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">Wind Speed:</div>
+          <div class="DataDiv" id="windSp"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">Swell Direction:</div>
+          <div class="DataDiv" id="swellDirect"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">Swell Height:</div>
+          <div class="DataDiv" id="swellH"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">Swell Period:</div>
+          <div class="DataDiv" id="swellP"></div>
+        </div>
+        
+
+      </div>
+
+      <div id="navDayContainer">
+        <div id="navDayBefore">
+          <ion-icon name="arrow-back-circle-outline"></ion-icon>
+        </div>
+        <div id="navDayNext">
+          <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+        </div>
+      </div>
+      <div id="searchPaddle">
+        <button id="findNextPaddle">Find Next Paddle</button>
+      </div>
+
+      <button id="refreshBtn">Refresh Data</button>
+    </div>
+    
+  </main>
+  <script src="getData.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+</html>
