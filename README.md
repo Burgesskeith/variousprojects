@@ -8,6 +8,7 @@ Index:
  - Clock: a working clock using html, css and javascript
  - EncryptionClass: using encryption and other javascript string methods.
  - Keyboard - css challenge to produce a keyboard that looks like the Apple version.  It works too!
+ - Shopcart - A shopping cart built in Javascript
  - Tic Tac Toe - a short game built in React
- - Website: Exercise to close an existing website home page.
+ - Website: Exercise to clone an existing website home page using HTML.CSS only.
 
