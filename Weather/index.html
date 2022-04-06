@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Application</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="phoneContainer">
+    <div id=micContainer>
+      <div id="roundBit"></div>
+      <div id="mic"></div>
+    </div>
+    <div id="displayArea">
+      <div class="nav">
+        <i id="menu" class="fa fa-bars fa-2x"></i>
+        <input id="cityInput" type="text" placeholder="SYDNEY">
+
+        <!-- <p id="location">SYDNEY</p> -->
+        <img src="./magnify.png" id="magnify" alt="" />
+      </div>
+
+      <div class="results">
+        <div class="timeArea">
+          <div class="clock">
+            <div id="hour">07</div>
+            <div class="colon">:</div>
+            <div id="minute">00</div>
+          </div>
+          <div class="date">
+            <span id="weekday">TUESDAY,</span>
+            <span id="month">5<sup>th</sup>April</span>
+          </div>
+        </div>
+        <div id="main">
+          <div class="temp">
+            <div id="mainTemp">21&#176;c</div>
+            <span id="up"></span>High <span id="max">22 - </span>
+            <span id="down"></span>Low <span id="min">19</span>
+          </div>
+          <div class="extraInfo">
+            <div class="weatherBlock" id="weather">Clear</div>
+          </div>
+          <div class="details">
+            <div class="detail">
+              <span class="detail-tag">FEELS LIKE</span>
+              <span class="detail-info" id="temp-like">21&#176;c</span>
+            </div>
+            <div class="detail">
+              <span class="detail-tag">HUMIDITY</span>
+              <span class="detail-info" id="humid">12.23%</span>
+            </div>
+            <div class="detail">
+              <span class="detail-tag">WIND</span>
+              <span class="detail-info" id="wind">16km/h</span>
+            </div>
+            <div class="detail">
+              <span class="detail-tag">VISIBILTY</span>
+              <span class="detail-info" id="visible">180m</span>
+            </div>
+            <div class="detail">
+              <span class="detail-tag">CLOUDS</span>
+              <span class="detail-info" id="cloud">50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+    <div id="homeButton" onclick="findCity()"></div>
+  </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
