@@ -4,6 +4,7 @@ The following projects were created to learn about various aspects of Javascript
 
 Index:
  - 10 x 10 table - constructed using javascript
+ - Weather App.  Enter a city, click the button and receive weather information.
  - Battery - application to check the battery status of a laptop
  - Clock: a working clock using html, css and javascript
  - EncryptionClass: using encryption and other javascript string methods.
