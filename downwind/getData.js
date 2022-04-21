@@ -1,10 +1,15 @@
 /*  Paddling Calculator for Mooloolaba Beach
     Keith Burgess copyright 2021
-    Data is from stormglass.io
+    Loads forecast marine weather data from stormglass.io
+    Move forward and backward through the data to find acceptable paddling conditions.
+    Use Find next paddle to search for the next day with ideal conditions.
 */
+
+document.getElementById("loadingImg").style.display = "none";
 
 const refreshRequested = document.getElementById("refreshBtn");
 refreshRequested.addEventListener("click", (e) => {
+  document.getElementById("loadingImg").style.display = "block";
   getData();
 });
 
@@ -16,11 +21,16 @@ const getData = (myData) => {
   const lng = 153.1217;
   const params =
     "airTemperature,windDirection,windSpeed,swellDirection,swellHeight,swellPeriod";
+
+  const apiKey =
+    "33daf96e-541f-11ec-be8b-0242ac130002-33daf9dc-541f-11ec-be8b-0242ac130002";
+  console.log(apiKey);
+
   fetch(
     `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`,
     {
       headers: {
-        Authorization: process.env.auth,
+        Authorization: apiKey,
       },
     }
   )
@@ -32,6 +42,8 @@ const getData = (myData) => {
     })
     .then((myData) => {
       caculateScore(myData);
+      document.getElementById("loadingImg").style.display = "none";
+      // document.getElementById("loading").innerText = "";
       document.getElementById("searchPaddle").style.display = "block";
       return myData;
     })
@@ -51,7 +63,7 @@ const getData = (myData) => {
 const findNextPaddle = (myData) => {
   let findPaddle = document.getElementById("findNextPaddle");
   let foundScore;
-  let initialDisplayHour = displayHour;
+  let initialDisplayHour = displayHour + 10;
   let searchTimeframe = displayHour;
   findPaddle.addEventListener("click", (e) => {
     for (let i = displayHour; i <= searchTimeframe + 120; i++) {
@@ -91,86 +103,87 @@ const goBackForward = (myData) => {
 };
 
 const toDegrees = (num) => {
-  if ((num > 350 && num < 360) || (num >= 0 && num <= 10)) {
+  if ((num > 348 && num < 361) || (num >= 0 && num <= 12)) {
     windDirScore = 100;
     swellDirScore = 100;
     return "N";
-  } else if (num > 10 && num <= 35) {
+  } else if (num > 11 && num <= 32) {
     windDirScore = 100;
     swellDirScore = 100;
     return "NNE";
-  } else if (num > 35 && num <= 55) {
+  } else if (num > 33 && num <= 57) {
     windDirScore = 90;
     swellDirScore = 90;
     return "NE";
-  } else if (num > 55 && num <= 75) {
+  } else if (num > 57 && num <= 78) {
     windDirScore = 70;
     swellDirScore = 70;
     return "ENE";
-  } else if (num > 75 && num <= 105) {
+  } else if (num > 78 && num <= 101) {
     windDirScore = 10;
     swellDirScore = 30;
     return "E";
-  } else if (num > 105 && num <= 120) {
+  } else if (num > 101 && num <= 123) {
     windDirScore = 10;
     swellDirScore = 20;
     return "ESE";
-  } else if (num > 120 && num <= 150) {
+  } else if (num > 123 && num <= 146) {
     windDirScore = 40;
     swellDirScore = 70;
     return "SE";
-  } else if (num > 150 && num <= 170) {
+  } else if (num > 146 && num <= 168) {
     windDirScore = 80;
     swellDirScore = 80;
     return "SSE";
-  } else if (num > 170 && num <= 190) {
+  } else if (num > 168 && num <= 191) {
     windDirScore = 90;
     swellDirScore = 90;
     return "S";
-  } else if (num > 190 && num <= 212) {
+  } else if (num > 191 && num <= 212) {
     windDirScore = 100;
     swellDirScore = 100;
     return "SSW";
-  } else if (num > 212 && num <= 235) {
+  } else if (num > 212 && num <= 236) {
     windDirScore = 70;
     swellDirScore = 60;
     return "SW";
-  } else if (num > 235 && num <= 260) {
+  } else if (num > 236 && num <= 259) {
     windDirScore = 20;
     swellDirScore = 30;
     return "WSW";
-  } else if (num > 260 && num <= 280) {
+  } else if (num > 259 && num <= 281) {
     windDirScore = 20;
     swellDirScore = 10;
     return "W";
-  } else if (num > 280 && num <= 305) {
+  } else if (num > 281 && num <= 304) {
     windDirScore = 10;
     swellDirScore = 10;
     return "WNW";
-  } else if (num > 305 && num <= 350) {
+  } else if (num > 304 && num <= 348) {
     windDirScore = 30;
     swellDirScore = 30;
     return "NW";
   } else {
     windDirScore = 90;
     swellDirScore = 90;
-    return "NNW";
+    return "N";
   }
 };
 
 const displayData = (myData) => {
-  console.log(myData);
-  console.log(myData.hours[displayHour].airTemperature.sg);
-  console.log(myData.hours[displayHour].windDirection.sg);
-  console.log(myData.hours[displayHour].airTemperature.sg);
-  console.log(myData.hours[displayHour].windDirection.sg);
-  console.log(myData.hours[displayHour].windSpeed.sg);
-  console.log(myData.hours[displayHour].swellDirection.sg);
-  console.log(myData.hours[displayHour].swellHeight.sg);
-  console.log(myData.hours[displayHour].swellPeriod.sg);
+  // console.log(myData);
+  // console.log("Temp: " + myData.hours[displayHour].airTemperature.sg);
+  // console.log("Wind Direction: " + myData.hours[displayHour].windDirection.sg);
+  // console.log("Wind speed: " + myData.hours[displayHour].windSpeed.sg);
+  // console.log(
+  //   "Swell Direction: " + myData.hours[displayHour].swellDirection.sg
+  // );
+  // console.log("Swell Height: " + myData.hours[displayHour].swellHeight.sg);
+  // console.log("Swell Period: " + myData.hours[displayHour].swellPeriod.sg);
   let pullTime = new Date(myData.hours[displayHour].time);
-  console.log(myData);
-  console.log(`Time before manipulation: ${pullTime}`);
+  // console.log("Time: " + pullTime);
+  // console.log(myData);
+  // console.log(`Time before manipulation: ${pullTime}`);
   let timeOfDay = pullTime.getHours();
   document.getElementById("timeOfDay").innerText = `${timeOfDay}:00`;
 
@@ -216,7 +229,9 @@ const displayData = (myData) => {
   const windDispl = document.getElementById("windDir");
   windDispl.innerText = windDir;
 
-  const windSpeed = `${myData.hours[displayHour].windSpeed.sg} km/h`;
+  const windSpeed = `${(myData.hours[displayHour].windSpeed.sg * 3.6).toFixed(
+    1
+  )} km/h`;
   let windSp = document.getElementById("windSp");
   windSp.innerText = windSpeed;
 
@@ -288,11 +303,11 @@ const caculateScore = (myData) => {
     swellDirScore * swellDircont +
     swellPeriodScore * swellPcont;
 
-  console.log("Wind Direction Score: " + windDirScore);
-  console.log("Wind Speed Score: " + windSpeedScore);
-  console.log("Swell Direction Score: " + swellDirScore);
-  console.log("Swell Height Score: " + swellHscore);
-  console.log("Swell Period Score: " + swellPeriodScore);
+  // console.log("Wind Direction Score: " + windDirScore);
+  // console.log("Wind Speed Score: " + windSpeedScore);
+  // console.log("Swell Direction Score: " + swellDirScore);
+  // console.log("Swell Height Score: " + swellHscore);
+  // console.log("Swell Period Score: " + swellPeriodScore);
 
   // let thermscore = 80; // temporary for testing only
   if (thermscore < 20) {
